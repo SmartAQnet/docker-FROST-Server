@@ -1,0 +1,15 @@
+version: '2'
+services:
+        sensorthings:
+                build: .
+                ports:
+                        - "8080:8080"
+                        - "1883:1883"
+                links:
+                        - "postgis"
+                          
+        postgis:
+                image: "mdillon/postgis"
+                environment:
+                        POSTGRES_USER: sensorthings
+                        POSTGRES_PASSWORD: mysecretpassword

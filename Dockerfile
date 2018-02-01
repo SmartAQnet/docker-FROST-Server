@@ -16,5 +16,5 @@ COPY tomcat-users.xml conf/tomcat-users.xml
 #TODO: switch on/off 
 COPY manager.xml conf/Catalina/localhost/manager.xml
 #Copy war from previous build and configure to use linked postgis
-COPY --from=builder /SensorThingsServer/SensorThingsServer/target/SensorThingsServer-1.0.war /usr/local/tomcat/webapps/SensorThingsService.war
+COPY --from=builder /SensorThingsServer/SensorThingsServer/target/*.war /usr/local/tomcat/webapps/SensorThingsService.war
 COPY SensorThingsService.xml conf/Catalina/localhost/SensorThingsService.xml

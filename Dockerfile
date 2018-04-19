@@ -1,7 +1,7 @@
 FROM maven:3-jdk-8-alpine as builder
 
 # Download and compile FROST-Server
-ENV GITHASH cf70db46883f67b6e77ef4c2d5fa37eea00e2b42
+ENV GITHASH 040e16634d5e981386129e10800192fe598889da
 
 ADD https://github.com/image357/SensorThingsServer/archive/${GITHASH}.zip /SensorThingsServer.zip
 RUN jar xf SensorThingsServer.zip

@@ -13,4 +13,4 @@ ADD http://repo.maven.apache.org/maven2/org/postgresql/postgresql/9.4.1212/postg
 ADD http://repo.maven.apache.org/maven2/net/postgis/postgis-jdbc/2.2.1/postgis-jdbc-2.2.1.jar /usr/local/tomcat/lib/
 
 # Copy to tomcat path
-COPY --from=builder /SensorThingsServer*/FROST-Server.HTTP/target/*.war /usr/local/tomcat/webapps/FROST-Server.war
+COPY --from=builder /SensorThingsServer*/FROST-Server.MQTTP/target/*.war /usr/local/tomcat/webapps/FROST-Server.war

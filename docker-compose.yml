@@ -18,6 +18,8 @@ services:
       - POSTGRES_DB=sensorthings
       - POSTGRES_USER=sensorthings
       - POSTGRES_PASSWORD=ChangeMe
+    ports:
+        - 5432:5432
     volumes:
       - postgis_volume:/var/lib/postgresql/data
 

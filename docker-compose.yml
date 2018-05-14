@@ -2,7 +2,11 @@ version: '2'
 
 services:
   web:
-    build: .
+    build:
+        context: .
+        dockerfile: Dockerfile
+        args:
+            GITHASH: ec65d3a7fc2f9ab0630e2bfd5b599e57f8b0b66d
     environment:
         - persistence_persistenceManagerImplementationClass=de.fraunhofer.iosb.ilt.sta.persistence.postgres.stringid.PostgresPersistenceManagerString
         - persistence_idGenerationMode=ServerAndClientGenerated

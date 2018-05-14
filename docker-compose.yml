@@ -3,6 +3,9 @@ version: '2'
 services:
   web:
     build: .
+    environment:
+        - persistence_persistenceManagerImplementationClass=de.fraunhofer.iosb.ilt.sta.persistence.postgres.stringid.PostgresPersistenceManagerString
+        - persistence_idGenerationMode=ServerAndClientGenerated
     ports:
       - 8080:8080
       - 1883:1883

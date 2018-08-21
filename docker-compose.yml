@@ -6,7 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
         args:
-            GITHASH: ce95c9f22a4b5c238743558ef470692db9de5363
+            GITHASH: 612f54b06ee3deb9ec073f645e867d8a16ae4f6d
     environment:
         - serviceRootUrl=http://smartaqnet.teco.edu:8080/FROST-Server
         - persistence_persistenceManagerImplementationClass=de.fraunhofer.iosb.ilt.sta.persistence.postgres.stringid.PostgresPersistenceManagerString

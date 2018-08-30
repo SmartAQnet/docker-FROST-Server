@@ -6,7 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
         args:
-            GITHASH: 612f54b06ee3deb9ec073f645e867d8a16ae4f6d
+            GITHASH: 41bb6dae214157e9b8078aef39978dd546e921e6
     environment:
         - serviceRootUrl=http://smartaqnet.teco.edu:8080/FROST-Server
         - persistence_persistenceManagerImplementationClass=de.fraunhofer.iosb.ilt.sta.persistence.postgres.stringid.PostgresPersistenceManagerString
@@ -17,8 +17,8 @@ services:
         - persistence_db_username=sensorthings
         - persistence_db_password=ChangeMe
     ports:
-      - 8080:8080
-      - 1883:1883
+      - "8080:8080"
+      - "1883:1883"
     depends_on:
       - database
 
@@ -29,7 +29,7 @@ services:
       - POSTGRES_USER=sensorthings
       - POSTGRES_PASSWORD=ChangeMe
     ports:
-        - 5432:5432
+        - "5432:5432"
     volumes:
       - postgis_volume:/var/lib/postgresql/data
 

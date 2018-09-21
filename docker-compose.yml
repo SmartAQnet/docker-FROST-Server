@@ -25,6 +25,7 @@ services:
 
   database:
     image: mdillon/postgis:latest
+    restart: always
     environment:
       - POSTGRES_DB=sensorthings
       - POSTGRES_USER=sensorthings

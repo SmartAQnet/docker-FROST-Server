@@ -4,6 +4,7 @@ services:
   web:
     build:
         context: .
+        restart: always
         dockerfile: Dockerfile
         args:
             GITHASH: 1e28976bd152e659d4eebfa763259abad82ef8ff

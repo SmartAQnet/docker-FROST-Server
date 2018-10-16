@@ -7,6 +7,7 @@ services:
         dockerfile: Dockerfile
         args:
             GITHASH: 7efac503869da4928b4d18780fd8bcedb2e45de9
+    restart: always
     environment:
         - serviceRootUrl=http://smartaqnet.teco.edu:8080/FROST-Server
         - persistence_persistenceManagerImplementationClass=de.fraunhofer.iosb.ilt.sta.persistence.postgres.stringid.PostgresPersistenceManagerString
@@ -24,6 +25,7 @@ services:
 
   database:
     image: mdillon/postgis:latest
+    restart: always
     environment:
       - POSTGRES_DB=sensorthings
       - POSTGRES_USER=sensorthings

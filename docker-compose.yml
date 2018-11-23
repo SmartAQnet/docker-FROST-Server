@@ -6,7 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
         args:
-            GITHASH: 41442662b38b3fa217bad2fde6b5f01836244464
+            GITHASH: a625e1fc850efd43e76e77bffb61de97201fc351
     restart: always
     environment:
         - serviceRootUrl=http://smartaqnet.teco.edu:8080/FROST-Server

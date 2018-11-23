@@ -6,6 +6,7 @@ services:
         context: .
         dockerfile: Dockerfile
         args:
+            GITREPO: https://github.com/SmartAQnet/FROST-Server
             GITHASH: a625e1fc850efd43e76e77bffb61de97201fc351
     restart: always
     environment:
